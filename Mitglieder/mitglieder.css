@@ -1,0 +1,151 @@
+/* ========= Grundlayout ========= */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f6fa;
+  color: #1d1d1f;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========= Navigation ========= */
+.NAV {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.NAV nav a {
+  color: #0071e3;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.NAV nav a:hover {
+  color: #004ea8;
+  transform: scale(1.05);
+}
+
+/* ========= Überschriften ========= */
+h1 {
+  text-align: center;
+  margin: 2.5rem 0 1rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #0071e3;
+}
+
+/* ========= Details ========= */
+details {
+  background-color: #ffffff;
+  margin: 1rem auto;
+  max-width: 700px;
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 113, 227, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+details:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 18px rgba(0, 113, 227, 0.12);
+  border-color: rgba(0, 113, 227, 0.3);
+}
+
+summary {
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: #1d1d1f;
+  margin-bottom: 0.8rem;
+  outline: none;
+  list-style: none;
+  transition: color 0.3s ease;
+}
+
+details[open] summary {
+  color: #0071e3;
+}
+
+/* ========= Verschachtelte Details ========= */
+details details {
+  margin: 1rem 0 0 1.5rem; /* leicht eingerückt */
+  padding: 1rem;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 113, 227, 0.1);
+  background-color: #f9f9fb;
+  box-shadow: none;
+}
+
+details details summary {
+  font-size: 1.1rem;
+}
+
+/* ========= Bilder ========= */
+details img {
+  display: block;
+  width: 60%;
+  max-width: 280px;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.15);
+  transition: transform 0.3s ease;
+}
+
+details img:hover {
+  transform: scale(1.03);
+}
+
+/* ========= Absätze ========= */
+p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #515154;
+}
+
+/* ========= Animation ========= */
+details[open] {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========= Responsiveness ========= */
+@media (max-width: 768px) {
+  .NAV nav a {
+    display: inline-block;
+    margin: 0.4rem 0.6rem;
+    font-size: 1rem;
+  }
+
+  details {
+    max-width: 90%;
+    padding: 1.2rem;
+  }
+
+  details img {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  details details {
+    margin-left: 1rem;
+    padding: 0.8rem;
+  }
+}

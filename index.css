@@ -1,0 +1,114 @@
+/* ========= Grundlayout ========= */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f6fa;
+  color: #1d1d1f;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========= Navigation ========= */
+.NAV {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.NAV nav a {
+  color: #0071e3; /* Apple Blau */
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.NAV nav a:hover {
+  color: #004ea8;
+  transform: scale(1.05);
+}
+
+/* ========= Überschrift / Intro ========= */
+.Überschrfit {
+  text-align: center;
+  margin: 3rem 1rem 2rem;
+}
+
+.Überschrfit p {
+  font-size: 1.5rem;
+  color: #1d1d1f;
+  font-weight: 500;
+}
+
+/* ========= Mitglieder-Bereich ========= */
+.Mitglieder {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.Mitglieder h1 {
+  font-size: 2rem;
+  color: #0071e3;
+  margin-bottom: 1.5rem;
+}
+
+.Mitglieder img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 113, 227, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Mitglieder img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 113, 227, 0.2);
+}
+
+/* ========= GitHub-Link ========= */
+a[target="_blank"] {
+  display: block;
+  text-align: center;
+  margin: 3rem 0;
+  color: #1d1d1f;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+a[target="_blank"]:hover {
+  color: #0071e3;
+  transform: scale(1.05);
+}
+
+a[target="_blank"] i {
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+a[target="_blank"]:hover i {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* ========= Responsiveness ========= */
+@media (max-width: 768px) {
+  .Überschrfit p {
+    font-size: 1.2rem;
+  }
+
+  .Mitglieder img {
+    width: 95%;
+  }
+
+  .NAV nav a {
+    margin: 0.3rem 0.6rem;
+    font-size: 1rem;
+  }
+}
