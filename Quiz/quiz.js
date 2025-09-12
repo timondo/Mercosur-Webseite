@@ -1,3 +1,11 @@
+function false1() {
+  window.location= "/Quiz/Fragen/2.html"
+}
+
+
+
+
+
 //Verbindung mit der DB
 
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
