@@ -27,7 +27,7 @@ async function loadScore() {
     document.getElementById("scoreList").innerHTML = ""; //Lade anzeige wird gelöscht
     sortedData.forEach((player) => {
       const li = document.createElement("li");
-      li.textContent = `${player.user}: ${player.score}`;
+      li.textContent = `${player.user}: ${player.score}`+" Punkte";
       ul.appendChild(li);
     });
   }
