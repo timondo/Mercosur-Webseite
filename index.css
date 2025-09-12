@@ -98,9 +98,11 @@ body {
 }
 
 /* ========= GitHub-Link ========= */
-a[target="_blank"] {
-  display: block;
-  text-align: center;
+.github-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 3rem 0;
   color: #1d1d1f;
   font-weight: 500;
@@ -108,18 +110,19 @@ a[target="_blank"] {
   transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
 }
 
-a[target="_blank"]:hover {
+.github-link:hover {
   color: #0071e3;
   transform: scale(1.08);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-a[target="_blank"] i {
+.github-link i {
+  font-size: 40px;
   margin-bottom: 0.5rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-a[target="_blank"]:hover i {
+.github-link:hover i {
   transform: rotate(12deg) scale(1.15);
   color: #004ea8;
 }
