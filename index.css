@@ -25,7 +25,7 @@ body {
 }
 
 .NAV nav a {
-  color: #0071e3; /* Apple Blau */
+  color: #0071e3;
   text-decoration: none;
   margin: 0 1.2rem;
   font-weight: 500;
@@ -55,7 +55,7 @@ body {
   width: 50%;
 }
 
-/* ========= Überschrift / Intro ========= */
+/* ========= Überschrift ========= */
 .Überschrfit {
   text-align: center;
   margin: 3rem 1rem 2rem;
@@ -69,7 +69,36 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* ========= Mitglieder-Bereich ========= */
+/* ========= Informationen ========= */
+.Informationen {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.Informationen p {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0071e3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  min-width: 180px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: numberPop 0.6s ease forwards;
+}
+
+/* Verzögere jede Zahl, damit sie nacheinander kommt */
+.Informationen p:nth-child(1) { animation-delay: 0.2s; }
+.Informationen p:nth-child(2) { animation-delay: 0.4s; }
+.Informationen p:nth-child(3) { animation-delay: 0.6s; }
+
+/* ========= Mitglieder ========= */
 .Mitglieder {
   text-align: center;
   margin: 2rem auto;
@@ -132,36 +161,33 @@ body {
   .Überschrfit p {
     font-size: 1.2rem;
   }
-
+  .Informationen p {
+    min-width: 130px;
+    font-size: 1rem;
+  }
   .Mitglieder img {
     width: 95%;
   }
-
   .NAV nav a {
     margin: 0.3rem 0.6rem;
     font-size: 1rem;
   }
 }
 
-/* ========= Animations ========= */
+/* ========= Animationen ========= */
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Neue Animation für Zahlen */
+@keyframes numberPop {
+  0%   { opacity: 0; transform: scale(0.5); }
+  70%  { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
 }
