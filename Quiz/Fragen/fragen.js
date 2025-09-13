@@ -31,6 +31,7 @@ function false1() {
         alert("Nicht schummeln, du hast diese Frage schon beantwortet");
         window.location.href = "/Quiz/Fragen/2.html"
     } else{
+        localStorage.setItem("isdone1", true);
         window.location.href = "/Quiz/Fragen/2.html"
     }
 }
