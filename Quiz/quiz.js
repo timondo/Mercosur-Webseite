@@ -1,9 +1,4 @@
-function false1() {
-  window.location= "/Quiz/Fragen/2.html"
-}
-
-
-
+//JS für den DB Test
 
 
 //Verbindung mit der DB
