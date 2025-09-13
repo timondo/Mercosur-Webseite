@@ -1,9 +1,13 @@
 //JS für das Punkte hochladen
 
+
+
+//1.Frage
 function loadPoints() {
   if (localStorage.getItem("punkte") === null) {
     localStorage.setItem("punkte", 0);
     setItem("isdone1", false);
+    setItem("isdone2", false);
   } else {
     Points = localStorage.getItem("punkte");
     document.getElementById("Punkte").innerHTML = "Punkte: " + Points;
@@ -35,5 +39,30 @@ function false1() {
         window.location.href = "/Quiz/Fragen/2.html"
     }
 }
+//2. Frage
 
+function answer2() {
+  let isdone2 = localStorage.getItem("isdone2") === "true";
+  if (isdone2) {
+    alert("Nicht schummeln, du hast diese Frage schon beantwortet");
+
+  } else {
+    let aktuellepunkte = parseInt(localStorage.getItem("punkte"), 10) || 0;
+    aktuellepunkte += 1;
+    localStorage.setItem("punkte", aktuellepunkte);
+    window.location.href = "/Quiz/Fragen/3.html";
+    localStorage.setItem("isdone2", true);
+  }
+}
+
+function false2() {
+    let isdone2 = localStorage.getItem("isdone2") === "true";
+    if(isdone2) {
+        alert("Nicht schummeln, du hast diese Frage schon beantwortet");
+        window.location.href = "/Quiz/Fragen/3.html"
+    } else{
+        localStorage.setItem("isdone2", true);
+        window.location.href = "/Quiz/Fragen/2.html"
+    }
+}
 window.onload = loadPoints;
