@@ -18,6 +18,7 @@ function answer1() {
   let isdone1 = localStorage.getItem("isdone1") === "true";
   if (isdone1) {
     alert("Nicht schummeln, du hast diese Frage schon beantwortet");
+    window.location.href = "Quiz/Fragen/2.html";
 
   } else {
     let aktuellepunkte = parseInt(localStorage.getItem("punkte"), 10) || 0;
@@ -36,7 +37,7 @@ function false1() {
         window.location.href = "/Quiz/Fragen/2.html"
     } else{
         localStorage.setItem("isdone1", true);
-        window.location.href = "/Quiz/Fragen/2.html"
+        window.location.href = "/Quiz/Fragen/2.html";
     }
 }
 //2. Frage
@@ -45,6 +46,7 @@ function answer2() {
   let isdone2 = localStorage.getItem("isdone2") === "true";
   if (isdone2) {
     alert("Nicht schummeln, du hast diese Frage schon beantwortet");
+    window.location.href = "/Quiz/Fragen/3.html"
 
   } else {
     let aktuellepunkte = parseInt(localStorage.getItem("punkte"), 10) || 0;
@@ -59,10 +61,10 @@ function false2() {
     let isdone2 = localStorage.getItem("isdone2") === "true";
     if(isdone2) {
         alert("Nicht schummeln, du hast diese Frage schon beantwortet");
-        window.location.href = "/Quiz/Fragen/3.html"
+        window.location.href = "/Quiz/Fragen/3.html";
     } else{
         localStorage.setItem("isdone2", true);
-        window.location.href = "/Quiz/Fragen/3.html"
+        window.location.href = "/Quiz/Fragen/3.html";
     }
 }
 window.onload = loadPoints;

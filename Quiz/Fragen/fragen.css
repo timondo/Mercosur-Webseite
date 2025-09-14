@@ -141,3 +141,22 @@ body {
     font-size: 1rem;
   }
 }
+/* ========= Punkte-Anzeige ========= */
+.Punkte {
+  position: fixed;
+  top: 5rem; /* 👈 noch weiter nach unten geschoben */
+  right: 1rem;
+  background: #ffffff;
+  color: #0071e3;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.15);
+  border: 2px solid #0071e3;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.Punkte p {
+  margin: 0;
+}
