@@ -6,10 +6,10 @@
 function loadPoints() {
   if (localStorage.getItem("punkte") === null) {
     localStorage.setItem("punkte", 0);
-    setItem("isdone1", false);
-    setItem("isdone2", false);
+    localStorage.setItem("isdone1", false);
+    localStorage.setItem("isdone2", false);
   } else {
-    Points = localStorage.getItem("punkte");
+    let Points = localStorage.getItem("punkte");
     document.getElementById("Punkte").innerHTML = "Punkte: " + Points;
   }
 }
@@ -62,7 +62,7 @@ function false2() {
         window.location.href = "/Quiz/Fragen/3.html"
     } else{
         localStorage.setItem("isdone2", true);
-        window.location.href = "/Quiz/Fragen/2.html"
+        window.location.href = "/Quiz/Fragen/3.html"
     }
 }
 window.onload = loadPoints;
