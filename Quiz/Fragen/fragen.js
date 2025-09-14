@@ -18,7 +18,7 @@ function answer1() {
   let isdone1 = localStorage.getItem("isdone1") === "true";
   if (isdone1) {
     alert("Nicht schummeln, du hast diese Frage schon beantwortet");
-    window.location.href = "Quiz/Fragen/2.html";
+    window.location.href = "/Quiz/Fragen/2.html";
 
   } else {
     let aktuellepunkte = parseInt(localStorage.getItem("punkte"), 10) || 0;
@@ -67,4 +67,11 @@ function false2() {
         window.location.href = "/Quiz/Fragen/3.html";
     }
 }
+
+
+
+
+//Score eintragen
+
+
 window.onload = loadPoints;
