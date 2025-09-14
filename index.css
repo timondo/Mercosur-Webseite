@@ -55,18 +55,17 @@ body {
   width: 50%;
 }
 
-/* ========= Überschrift ========= */
-.Überschrfit {
-  text-align: center;
-  margin: 3rem 1rem 2rem;
-  animation: fadeInUp 1s ease forwards;
-}
-
-.Überschrfit p {
-  font-size: 1.5rem;
-  color: #1d1d1f;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+/* ========= Gemeinsame Überschrift-Stile ========= */
+.Überschrfit h1,
+.Mitglieder h1,
+.Aufgaben h1 {
+  font-size: 2rem;                     /* gleiche Größe */
+  color: #0071e3;                      /* Blau */
+  text-align: center;                   /* mittig */
+  margin-bottom: 1.5rem;               /* Abstand unten */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* leichter Schatten */
+  font-weight: normal;
+  animation: fadeIn 1s ease forwards;
 }
 
 /* ========= Informationen ========= */
@@ -93,7 +92,6 @@ body {
   animation: numberPop 0.6s ease forwards;
 }
 
-/* Verzögere jede Zahl, damit sie nacheinander kommt */
 .Informationen p:nth-child(1) { animation-delay: 0.2s; }
 .Informationen p:nth-child(2) { animation-delay: 0.4s; }
 .Informationen p:nth-child(3) { animation-delay: 0.6s; }
@@ -102,14 +100,6 @@ body {
 .Mitglieder {
   text-align: center;
   margin: 2rem auto;
-}
-
-.Mitglieder h1 {
-  font-size: 2rem;
-  color: #0071e3;
-  margin-bottom: 1.5rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease forwards;
 }
 
 .Mitglieder img {
@@ -125,6 +115,38 @@ body {
   box-shadow: 0 10px 30px rgba(0, 113, 227, 0.25);
   filter: brightness(1.05);
 }
+
+/* ========= Aufgaben ========= */
+.Aufgaben {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.Aufgaben-Boxen {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.Aufgaben-Boxen p {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 18px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0071e3;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  min-width: 180px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: numberPop 0.6s ease forwards;
+}
+
+.Aufgaben-Boxen p:nth-child(1) { animation-delay: 0.2s; }
+.Aufgaben-Boxen p:nth-child(2) { animation-delay: 0.4s; }
+.Aufgaben-Boxen p:nth-child(3) { animation-delay: 0.6s; }
 
 /* ========= GitHub-Link ========= */
 .github-link {
@@ -158,16 +180,22 @@ body {
 
 /* ========= Responsiveness ========= */
 @media (max-width: 768px) {
-  .Überschrfit p {
-    font-size: 1.2rem;
+  .Überschrfit h1,
+  .Mitglieder h1,
+  .Aufgaben h1 {
+    font-size: 1.8rem; /* kleinere Größe auf Handy */
   }
-  .Informationen p {
+  
+  .Informationen p,
+  .Aufgaben-Boxen p {
     min-width: 130px;
     font-size: 1rem;
   }
+  
   .Mitglieder img {
     width: 95%;
   }
+  
   .NAV nav a {
     margin: 0.3rem 0.6rem;
     font-size: 1rem;
