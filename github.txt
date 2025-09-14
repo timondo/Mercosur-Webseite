@@ -1,0 +1,2 @@
+git commit -m "Fix: Fragen und Quiz angepasst"
+git push
