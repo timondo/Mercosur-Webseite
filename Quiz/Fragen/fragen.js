@@ -71,7 +71,4 @@ function false2() {
 
 
 
-//Score eintragen
-
-
 window.onload = loadPoints;
