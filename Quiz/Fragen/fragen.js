@@ -70,6 +70,9 @@ function answer3() {
     alert("Nicht schummeln, du hast diese Frage schon beantwortet");
     window.location.href = "/Quiz/Fragen/4.html";
   } else {
+    let aktuellepunkte = parseInt(localStorage.getItem("punkte"), 10) || 0;
+    aktuellepunkte += 1;
+    localStorage.setItem("punkte", aktuellepunkte);
     localStorage.setItem("isdone3", true);
     window.location.href = "/Quiz/Fragen/4.html";
   }
@@ -86,12 +89,15 @@ function false3() {
   }
 }
 
-function anser4() {
+function answer4() {
   let isdone4 = localStorage.getItem("isdone4") === "true";
   if (isdone4) {
     alert("Nicht schummeln, du hast diese Frage schon beantwortet");
     window.location.href = "/Quiz/Fragen/5.html";
   } else{
+    let aktuellepunkte = parseInt(localStorage.getItem("punkte"), 10) || 0;
+    aktuellepunkte += 1;
+    localStorage.setItem("punkte", aktuellepunkte);
     localStorage.setItem("isdone4", true);
     window.location.href = "/Quiz/Fragen/4.html";
   }
