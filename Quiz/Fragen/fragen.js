@@ -115,9 +115,9 @@ function false4() {
 }
 
 
-function loadpoints() {
-  let Points = localStorage.getItem("punkte");
-  document.getElementById("points").innerHTML = Points;
+function loadErgebniss() {
+  let punkte = localStorage.getItem("punkte");
+  document.getElementById("points").innerHTML = punkte;
 }
 
 window.onload = loadPoints;
@@ -127,6 +127,6 @@ window.addEventListener("load", () => {
   
   if (currentPage.endsWith("quiz.html")) {
 
-    loadpoints();
+    loadErgebniss();
   }
 });
