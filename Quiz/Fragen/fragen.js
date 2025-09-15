@@ -68,13 +68,13 @@ function answer3() {
   let isdone3 = localStorage.getItem("isdone3") === "true";
   if (isdone3) {
     alert("Nicht schummeln, du hast diese Frage schon beantwortet");
-    window.location.href = "/Quiz/Fragen/4.html";
+    window.location.href = "/Quiz/quiz.html";
   } else {
     let aktuellepunkte = parseInt(localStorage.getItem("punkte"), 10) || 0;
     aktuellepunkte += 1;
     localStorage.setItem("punkte", aktuellepunkte);
     localStorage.setItem("isdone3", true);
-    window.location.href = "/Quiz/Fragen/4.html";
+    window.location.href = "/Quiz/quiz.html";
   }
 }
 
@@ -82,10 +82,10 @@ function false3() {
   let isdone3 = localStorage.getItem("isdone3") === "true";
   if (isdone3) {
     alert("Nicht schummeln, du hast diese Frage schon beantwortet");
-    window.location.href = "/Quiz/Fragen/4.html";
+    window.location.href = "/Quiz/quiz.html";
   } else {
     localStorage.setItem("isdone3", true);
-    window.location.href = "/Quiz/Fragen/4.html";
+    window.location.href = "/Quiz/quiz.html";
   }
 }
 
