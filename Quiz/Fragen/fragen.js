@@ -69,6 +69,13 @@ function false2() {
 }
 
 
+function checkQuiz() {
+  let isdone1 = localStorage.getItem("isdone1")
 
+  if(isdone1 === "true") {
+    window.location.href = "2.html";
+  }
+}
 
 window.onload = loadPoints;
+window.onload = checkQuiz;
