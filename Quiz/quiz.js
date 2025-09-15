@@ -16,7 +16,7 @@ document.getElementById("meineForm").addEventListener("submit", insertScore);
 
 async function insertScore(e) {
   e.preventDefault();
-  const punkte = document.getElementById("Punkte").innerHTML;
+  const punkte = document.getElementById("points").innerHTML;
   const username = document.getElementById("username").value;
   const { data, error } = await supabase.from("Leaderbord").insert([
     { user: username, score: punkte }, //Daten werden in die DB eingelesen

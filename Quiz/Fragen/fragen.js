@@ -9,7 +9,6 @@ function loadPoints() {
     localStorage.setItem("isdone3", false);
   } else {
     let Points = localStorage.getItem("punkte");
-    document.getElementById("points").innerHTML = Points;
     document.getElementById("Punkte").innerHTML = "Punkte: " + Points;
   }
 }
@@ -116,7 +115,18 @@ function false4() {
 }
 
 
+function loadpoints() {
+  let Points = localStorage.getItem("punkte");
+  document.getElementById("points").innerHTML = Points;
+}
 
 window.onload = loadPoints;
 
+window.addEventListener("load", () => {
+  const currentPage = window.location.pathname; // gibt z. B. "/index.html"
+  
+  if (currentPage.endsWith("quiz.html")) {
 
+    loadpoints();
+  }
+});
