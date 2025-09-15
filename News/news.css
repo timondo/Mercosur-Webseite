@@ -1,0 +1,163 @@
+/* ========= Grundlayout ========= */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f6fa, #e9ebf2);
+  color: #1d1d1f;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.5s ease;
+}
+
+/* ========= Navigation ========= */
+.NAV {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.NAV nav a {
+  color: #0071e3;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 500;
+  font-size: 1.05rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.NAV nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #0071e3;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.NAV nav a:hover {
+  color: #004ea8;
+  transform: scale(1.08);
+}
+
+.NAV nav a:hover::after {
+  width: 50%;
+}
+
+/* ========= Nachrichten-Bereich ========= */
+.Nachrichten {
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ========= News-Card (Details) ========= */
+details {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 113, 227, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.25s ease;
+}
+
+details:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 113, 227, 0.12);
+  border-color: rgba(0, 113, 227, 0.25);
+}
+
+/* ========= Summary (Titel) ========= */
+summary {
+  padding: 1.2rem 1.4rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #1d1d1f;
+  background: #f9fafc;
+  position: relative;
+  list-style: none;
+  transition: background 0.3s ease;
+}
+
+summary::marker {
+  display: none;
+}
+
+summary:hover {
+  background: #f0f3f8;
+}
+
+summary::after {
+  content: "▾";
+  position: absolute;
+  right: 1.4rem;
+  font-size: 1.3rem;
+  color: #888;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(180deg);
+  color: #0071e3;
+}
+
+/* ========= Inhalt ========= */
+details p {
+  padding: 1rem 1.4rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+  opacity: 0;
+  max-height: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, max-height 0.5s ease, transform 0.3s ease;
+}
+
+details[open] p {
+  opacity: 1;
+  max-height: 5000px;
+  transform: translateY(0);
+}
+
+details img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.4s ease, transform 0.3s ease;
+}
+
+details[open] img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ========= Responsiveness ========= */
+@media (max-width: 768px) {
+  summary {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  details img {
+    width: 95%;
+  }
+}
