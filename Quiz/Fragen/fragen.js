@@ -1,13 +1,3 @@
-import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
-
-const supabaseUrl = "https://agtzntwrqkdrapshnozu.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFndHpudHdycWtkcmFwc2hub3p1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcwNzg3MzcsImV4cCI6MjA3MjY1NDczN30.Z5Nr101z3LuKIWvBr6UNBHEXhUCTJuCYvbhuM5yerOc";
-
-const supabase = createClient(supabaseUrl, supabaseKey);
-
-
-
 //JS für das Punkte hochladen
 
 //1.Frage
