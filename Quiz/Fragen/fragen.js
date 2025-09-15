@@ -9,6 +9,7 @@ function loadPoints() {
     localStorage.setItem("isdone3", false);
   } else {
     let Points = localStorage.getItem("punkte");
+    document.getElementById("points").innerHTML = Points;
     document.getElementById("Punkte").innerHTML = "Punkte: " + Points;
   }
 }
