@@ -12,20 +12,16 @@ body {
 
 /* ========= Navigation ========= */
 .NAV {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1rem 0;
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 10;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
-}
-
-.NAV:hover {
-  backdrop-filter: blur(20px);
 }
 
 .NAV nav a {
@@ -33,9 +29,9 @@ body {
   text-decoration: none;
   margin: 0 1.2rem;
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   position: relative;
-  transition: color 0.3s ease, transform 0.2s ease, letter-spacing 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .NAV nav a::after {
@@ -52,8 +48,7 @@ body {
 
 .NAV nav a:hover {
   color: #004ea8;
-  transform: scale(1.08) rotate(-1deg);
-  letter-spacing: 1px;
+  transform: scale(1.08);
 }
 
 .NAV nav a:hover::after {
