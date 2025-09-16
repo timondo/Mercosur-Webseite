@@ -55,80 +55,31 @@ body {
   width: 50%;
 }
 
-/* ========= Gemeinsame Überschrift-Stile ========= */
-.Überschrfit h1,
-.Mitglieder h1,
-.Aufgaben h1 {
-  font-size: 2rem;                     /* gleiche Größe */
-  color: #0071e3;                      /* Blau */
-  text-align: center;                   /* mittig */
-  margin-bottom: 1.5rem;               /* Abstand unten */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* leichter Schatten */
+/* ========= Überschriften ========= */
+h1 {
+  font-size: 2rem;
+  color: #0071e3;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   font-weight: normal;
   animation: fadeIn 1s ease forwards;
 }
 
-/* ========= Informationen ========= */
-.Informationen {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.Informationen p {
-  background: #fff;
-  padding: 1rem 1.5rem;
-  border-radius: 18px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #0071e3;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-  min-width: 180px;
-  text-align: center;
-  opacity: 0;
-  transform: scale(0.8);
-  animation: numberPop 0.6s ease forwards;
-}
-
-.Informationen p:nth-child(1) { animation-delay: 0.2s; }
-.Informationen p:nth-child(2) { animation-delay: 0.4s; }
-.Informationen p:nth-child(3) { animation-delay: 0.6s; }
-
-/* ========= Mitglieder ========= */
-.Mitglieder {
-  text-align: center;
-  margin: 2rem auto;
-}
-
-.Mitglieder img {
-  width: 80%;
-  max-width: 600px;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 113, 227, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
-
-.Mitglieder img:hover {
-  transform: scale(1.05) rotate(-1deg);
-  box-shadow: 0 10px 30px rgba(0, 113, 227, 0.25);
-  filter: brightness(1.05);
-}
-
-/* ========= Aufgaben ========= */
-.Aufgaben {
-  text-align: center;
-  margin: 2rem auto;
-}
-
+/* ========= Sektionen mit Boxen ========= */
+.Hauptsitz,
+.Informationen,
 .Aufgaben-Boxen {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
+  margin: 1rem 0 3rem 0; /* mehr Abstand nach unten */
 }
 
+/* ========= Boxen ========= */
+.Hauptsitz p,
+.Informationen p,
 .Aufgaben-Boxen p {
   background: #fff;
   padding: 1rem 1.5rem;
@@ -144,9 +95,39 @@ body {
   animation: numberPop 0.6s ease forwards;
 }
 
+.Hauptsitz p:nth-child(1),
+.Informationen p:nth-child(1),
 .Aufgaben-Boxen p:nth-child(1) { animation-delay: 0.2s; }
+.Hauptsitz p:nth-child(2),
+.Informationen p:nth-child(2),
 .Aufgaben-Boxen p:nth-child(2) { animation-delay: 0.4s; }
+.Hauptsitz p:nth-child(3),
+.Informationen p:nth-child(3),
 .Aufgaben-Boxen p:nth-child(3) { animation-delay: 0.6s; }
+
+/* ========= Mitglieder ========= */
+.Mitglieder {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.Mitglieder h1 {
+  margin-bottom: 1.5rem;
+}
+
+.Mitglieder img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 113, 227, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.Mitglieder img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 10px 30px rgba(0, 113, 227, 0.25);
+  filter: brightness(1.05);
+}
 
 /* ========= GitHub-Link ========= */
 .github-link {
@@ -178,14 +159,25 @@ body {
   color: #004ea8;
 }
 
+/* ========= Animationen ========= */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes numberPop {
+  0%   { opacity: 0; transform: scale(0.5); }
+  70%  { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
 /* ========= Responsiveness ========= */
 @media (max-width: 768px) {
-  .Überschrfit h1,
-  .Mitglieder h1,
-  .Aufgaben h1 {
-    font-size: 1.8rem; /* kleinere Größe auf Handy */
+  h1 {
+    font-size: 1.8rem;
   }
   
+  .Hauptsitz p,
   .Informationen p,
   .Aufgaben-Boxen p {
     min-width: 130px;
@@ -200,22 +192,4 @@ body {
     margin: 0.3rem 0.6rem;
     font-size: 1rem;
   }
-}
-
-/* ========= Animationen ========= */
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Neue Animation für Zahlen */
-@keyframes numberPop {
-  0%   { opacity: 0; transform: scale(0.5); }
-  70%  { opacity: 1; transform: scale(1.1); }
-  100% { opacity: 1; transform: scale(1); }
 }

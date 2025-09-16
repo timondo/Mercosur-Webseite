@@ -10,25 +10,26 @@ body {
   transition: background 0.5s ease;
 }
 
-/* ========= Navigation ========= */
+/* ========= Navigation (angepasst) ========= */
 .NAV {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 1.3rem 0;
+  padding: 1rem 0;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
 .NAV nav a {
   color: #0071e3;
   text-decoration: none;
-  margin: 0 1.5rem;
-  font-weight: 600;
-  font-size: 1.3rem;
+  margin: 0 1.2rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   position: relative;
   transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -37,22 +38,21 @@ body {
   content: '';
   position: absolute;
   width: 0;
-  height: 3px;
-  bottom: -6px;
+  height: 2px;
+  bottom: -4px;
   left: 50%;
   background-color: #0071e3;
   transition: all 0.3s ease;
   transform: translateX(-50%);
-  border-radius: 2px;
 }
 
 .NAV nav a:hover {
   color: #004ea8;
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .NAV nav a:hover::after {
-  width: 60%;
+  width: 50%;
 }
 
 /* ========= Überschrift ========= */
@@ -143,8 +143,8 @@ details[open] {
 @media (max-width: 768px) {
   .NAV nav a {
     display: inline-block;
-    margin: 0.5rem 0.8rem;
-    font-size: 1.1rem;
+    margin: 0.3rem 0.6rem;
+    font-size: 1rem;
   }
 
   details {
