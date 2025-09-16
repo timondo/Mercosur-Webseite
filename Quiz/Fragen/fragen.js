@@ -74,7 +74,7 @@ function answer3() {
     aktuellepunkte += 1;
     localStorage.setItem("punkte", aktuellepunkte);
     localStorage.setItem("isdone3", true);
-    window.location.href = "/Quiz/quiz.html";
+    window.location.href = "/Quiz/Fragen/4.html";
   }
 }
 
@@ -82,10 +82,10 @@ function false3() {
   let isdone3 = localStorage.getItem("isdone3") === "true";
   if (isdone3) {
     alert("Nicht schummeln, du hast diese Frage schon beantwortet");
-    window.location.href = "/Quiz/quiz.html";
+    window.location.href = "/Quiz/Fragen/3.html";
   } else {
     localStorage.setItem("isdone3", true);
-    window.location.href = "/Quiz/quiz.html";
+    window.location.href = "/Quiz/Fragen/4.html";
   }
 }
 
@@ -93,26 +93,80 @@ function answer4() {
   let isdone4 = localStorage.getItem("isdone4") === "true";
   if (isdone4) {
     alert("Nicht schummeln, du hast diese Frage schon beantwortet");
-    window.location.href = "/Quiz/quiz.html";
-  } else{
+    window.location.href = "/Quiz/Fragen/5.html";
+  } else {
     let aktuellepunkte = parseInt(localStorage.getItem("punkte"), 10) || 0;
     aktuellepunkte += 1;
     localStorage.setItem("punkte", aktuellepunkte);
     localStorage.setItem("isdone4", true);
-    window.location.href = "/Quiz/quiz.html";
+    window.location.href = "/Quiz/Fragen/5.html";
   }
 }
 
 function false4() {
-  let isdone4 = localStorage.getItem("isdone4") === "true"
-  if(isdone4) {
-        alert("Nicht schummeln, du hast diese Frage schon beantwortet");
+  let isdone4 = localStorage.getItem("isdone4") === "true";
+  if (isdone4) {
+    alert("Nicht schummeln, du hast diese Frage schon beantwortet");
     window.location.href = "/Quiz/Fragen/5.html";
   } else {
     localStorage.setItem("isdone4", true);
     window.location.href = "Quiz/Fragen/5.html";
   }
 }
+
+// Frage 5
+function answer5() {
+  let isdone5 = localStorage.getItem("isdone5") === "true";
+  if (isdone5) {
+    alert("Nicht schummeln, du hast diese Frage schon beantwortet");
+    window.location.href = "/Quiz/Fragen/6.html";
+  } else {
+    let aktuellepunkte = parseInt(localStorage.getItem("punkte"), 10) || 0;
+    aktuellepunkte += 1;
+    localStorage.setItem("punkte", aktuellepunkte);
+    localStorage.setItem("isdone5", true);
+    window.location.href = "/Quiz/Fragen/6.html";
+  }
+}
+
+function false5() {
+  let isdone5 = localStorage.getItem("isdone5") === "true";
+  if (isdone5) {
+    alert("Nicht schummeln, du hast diese Frage schon beantwortet");
+    window.location.href = "/Quiz/Fragen/6.html";
+  } else {
+    localStorage.setItem("isdone5", true);
+    window.location.href = "/Quiz/Fragen/6.html";
+  }
+}
+
+// Frage 6
+function answer6() {
+  let isdone6 = localStorage.getItem("isdone6") === "true";
+  if (isdone6) {
+    alert("Nicht schummeln, du hast diese Frage schon beantwortet");
+    window.location.href = "/Quiz/quiz.html";
+  } else {
+    let aktuellepunkte = parseInt(localStorage.getItem("punkte"), 10) || 0;
+    aktuellepunkte += 1;
+    localStorage.setItem("punkte", aktuellepunkte);
+    localStorage.setItem("isdone6", true);
+    window.location.href = "/Quiz/quiz.html";
+  }
+}
+
+function false6() {
+  let isdone6 = localStorage.getItem("isdone6") === "true";
+  if (isdone6) {
+    alert("Nicht schummeln, du hast diese Frage schon beantwortet");
+    window.location.href = "/Quiz/quiz.html";
+  } else {
+    localStorage.setItem("isdone6", true);
+    window.location.href = "/Quiz/quiz.html";
+  }
+}
+
+
 
 
 function loadErgebniss() {
@@ -124,9 +178,8 @@ window.onload = loadPoints;
 
 window.addEventListener("load", () => {
   const currentPage = window.location.pathname; // gibt z. B. "/index.html"
-  
-  if (currentPage.endsWith("quiz.html")) {
 
+  if (currentPage.endsWith("quiz.html")) {
     loadErgebniss();
   }
 });
