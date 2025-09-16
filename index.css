@@ -66,21 +66,43 @@ h1 {
   animation: fadeIn 1s ease forwards;
 }
 
-/* ========= Sektionen mit Boxen ========= */
+/* ========= Sektionen ========= */
 .Hauptsitz,
 .Informationen,
-.Aufgaben-Boxen {
+.Aufgaben,
+.Finanzierung {
+  margin: 2rem 0 3rem 0;
+  text-align: center;
+}
+
+.Hauptsitz h1,
+.Informationen h1,
+.Aufgaben h1,
+.Finanzierung h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #0071e3;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  font-weight: normal;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* ========= Boxen-Container ========= */
+.Hauptsitz-Boxen,
+.Informationen-Boxen,
+.Aufgaben-Boxen,
+.Finanzierung-Boxen {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin: 1rem 0 3rem 0; /* mehr Abstand nach unten */
 }
 
 /* ========= Boxen ========= */
 .Hauptsitz p,
 .Informationen p,
-.Aufgaben-Boxen p {
+.Aufgaben-Boxen p,
+.Finanzierung p {
   background: #fff;
   padding: 1rem 1.5rem;
   border-radius: 18px;
@@ -95,15 +117,21 @@ h1 {
   animation: numberPop 0.6s ease forwards;
 }
 
+/* ========= Animation-Delays ========= */
 .Hauptsitz p:nth-child(1),
 .Informationen p:nth-child(1),
-.Aufgaben-Boxen p:nth-child(1) { animation-delay: 0.2s; }
+.Aufgaben-Boxen p:nth-child(1),
+.Finanzierung p:nth-child(1) { animation-delay: 0.2s; }
+
 .Hauptsitz p:nth-child(2),
 .Informationen p:nth-child(2),
-.Aufgaben-Boxen p:nth-child(2) { animation-delay: 0.4s; }
+.Aufgaben-Boxen p:nth-child(2),
+.Finanzierung p:nth-child(2) { animation-delay: 0.4s; }
+
 .Hauptsitz p:nth-child(3),
 .Informationen p:nth-child(3),
-.Aufgaben-Boxen p:nth-child(3) { animation-delay: 0.6s; }
+.Aufgaben-Boxen p:nth-child(3),
+.Finanzierung p:nth-child(3) { animation-delay: 0.6s; }
 
 /* ========= Mitglieder ========= */
 .Mitglieder {
@@ -179,7 +207,8 @@ h1 {
   
   .Hauptsitz p,
   .Informationen p,
-  .Aufgaben-Boxen p {
+  .Aufgaben-Boxen p,
+  .Finanzierung p {
     min-width: 130px;
     font-size: 1rem;
   }
