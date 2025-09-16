@@ -66,7 +66,7 @@ h1 {
   animation: fadeInUp 0.8s ease forwards;
 }
 
-/* ========= News Cards ========= */
+/* ========= News Cards / Mitglieder ========= */
 details {
   background-color: #ffffff;
   margin: 1.5rem auto;
@@ -139,6 +139,18 @@ details[open] {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* ========= Mitgliederfarben ========= */
+.mitglied-name {
+  color: #0071e3; /* Blau für Namen */
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.mitglied-info {
+  color: #1d1d1f; /* Schwarz für Infos */
+  font-size: 1rem;
+}
+
 /* ========= Responsiveness ========= */
 @media (max-width: 768px) {
   .NAV nav a {
@@ -158,5 +170,13 @@ details[open] {
 
   details img {
     width: 95%;
+  }
+
+  .mitglied-name {
+    font-size: 1.1rem;
+  }
+
+  .mitglied-info {
+    font-size: 0.95rem;
   }
 }
